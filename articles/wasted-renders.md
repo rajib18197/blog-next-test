@@ -5,13 +5,13 @@ date: "2024-03-10"
 
 > **In react, a parent component re-render causes all of it's child components (If any) to re-render as well even when the props remains unchanged.** In "the react territory" they assume that components we write in terms of rendering process are always pure.
 
-- Since that's not always possible as we can make components impure by JavaScript built in natives such as `Date()` Object and by other things if the need arises and react also gave us some escape hatches (e.g. `useRef()`, `useEffect()` etc.) to execute "on the side" works apart from a component's main work.
+Since that's not always possible as **we can make components impure by JavaScript built in natives** such as `Date()` Object and by other things if the need arises and react also gave us some escape hatches (e.g. `useRef()`, `useEffect()` etc.) to execute "_on the side_" works apart from a component's main work.
 
-- So to avoid stale data in the UI, React plays it safe and re-render all the children. In Certain situations some re-renders cause visible lag in the UI as the component does some heavy lifting work during the process of rendering.
+So to avoid stale data in the UI, React plays it safe and re-render all the children. In Certain situations some re-renders cause visible lag in the UI as the component does some heavy lifting work during the process of rendering.
 
-- Outlining the situation be like- React invokes your component function, calculates expensive operations, does all the diffing related stuff and only to see in the end nothing has changed. All of the operations, yes needless operations. In technical terms this is called wasted render.
+> **Outlining the situation be like- React invokes your component function, calculates expensive operations, does all the diffing related stuff and only to see in the end nothing has changed. All of the operations, yes needless operations. In technical terms this is called wasted render.**
 
-- So to prevent that, One solution could be to wrap the component with `memo()` which make sure component only re-render when props changed or the context it subscribed to changed or its own state has changed. That would be a nice solution to prevent that visible lag.
+So to prevent that, One solution could be to wrap the component with `memo()` which make sure component only re-render when props changed or the context it subscribed to changed or its own state has changed. That would be a nice solution to prevent that visible lag.
 
 ### `1` Calculate Age in JavaScript
 
