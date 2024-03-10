@@ -21,6 +21,8 @@ const calcAge = function(age){
 }
 ```
 
+---
+
 ### `2` the following sketch for what the DOM should look like:
 
 ```JS
@@ -34,7 +36,7 @@ const calcAge = function(age){
   </button>
 </main>
 <footer>
-  <p>Copyright 2022 Big Count Inc.</p>
+  <p>Copyright 2024 Big Count Inc.</p>
 </footer>
 ```
 
