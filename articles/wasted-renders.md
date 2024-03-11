@@ -43,3 +43,5 @@ const calcAge = function(age){
 Another solution would be to compose components in a better way by leveraging children prop. But again that's not possible sometimes.
 
 𝑨𝒍𝒓𝒊𝒈𝒉𝒕, 𝑻𝒉𝒂𝒕'𝒔 𝒊𝒕 𝒇𝒐𝒓 𝒕𝒐𝒅𝒂𝒚! 𝑻𝒉𝒂𝒏𝒌 𝒚𝒐𝒖 𝒇𝒐𝒓 𝒓𝒆𝒂𝒅𝒊𝒏𝒈 📖.
+
+<!-- Every Problem is An Opportunity to Show Which Super Hero You Are  -->
