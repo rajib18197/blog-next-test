@@ -2,8 +2,8 @@ import BlogsList from "./components/BlogsList";
 
 export default function Home() {
   return (
-    <div>
+    <main className="main">
       <BlogsList />
-    </div>
+    </main>
   );
 }

@@ -1,4 +1,5 @@
 import getBlogsData, { getBlogData } from "@/lib/blogs";
+import Markdown from "markdown-to-jsx";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -12,17 +13,17 @@ export default async function Blog({ params }) {
 
   return (
     <main className="px-6 mx-auto">
-      <h1 className="text-3xl mt-4 mb-6">{title}</h1>
-      {/* <p className="mt-0">{pubDate}</p> */}
-      <article>
-        <section
-          className="flex flex-col gap-[20px]"
-          dangerouslySetInnerHTML={{ __html: contentHTML }}
-        />
-        <p>
-          <Link href="/">← Back to home</Link>
-        </p>
-      </article>
+      <div className="m-4">
+        <Link href="/" className="bg-slate-900 text-slate-100 p-2 rounded">
+          ← Back to home
+        </Link>
+      </div>
+      <div>
+        <h1 className="text-3xl mt-4 mb-6 text-slate-900">{title}</h1>
+        <article className="prose prose-a:text-blue-600 lg:prose-xl">
+          <Markdown>{contentHTML}</Markdown>
+        </article>
+      </div>
     </main>
   );
 }
