@@ -195,7 +195,7 @@ blockquote {
 
   &::before {
     content: "";
-    width: 200px;
+    width: 150px;
     height: 4px;
     background-color: orangered;
   }
