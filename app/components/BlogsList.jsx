@@ -21,7 +21,7 @@ export default function BlogsList() {
         </div>
         <div className="flex justify-between items-center">
           <Link href={"/"}>
-            <p className="text-2xl uppercase font-bold">🏝️ IDU-CYEIIDW</p>
+            <p className="text-[18px] uppercase font-bold">🏝️ IDU-CYEIIDW</p>
           </Link>
           <Link
             href={"/"}
