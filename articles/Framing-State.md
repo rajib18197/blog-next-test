@@ -1,5 +1,5 @@
 ---
-title: 𝐅𝐫𝐚𝐦𝐢𝐧𝐠 𝐒𝐭𝐚𝐭𝐞 𝐃𝐞𝐬𝐢𝐠𝐧
+title: Framing State Design
 date: "2024-03-18"
 ---
 

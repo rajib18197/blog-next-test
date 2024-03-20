@@ -7,6 +7,8 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
   font-size: 62.5%;
+
+  --line-color: rgb(115, 43, 247);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,6 +24,7 @@ body {
   /* background-image: linear-gradient(to right bottom, #ff3366, #ba265d); */
   background-color: #faf9f9;
   background-color: hsl(225deg, 25%, 95%);
+  background-color: #fffef5;
   /* background-color: hsl(210deg, 30%, 8%); */
   max-width: 1050px;
   width: 100%;
@@ -80,7 +83,7 @@ blockquote {
     top: 50%;
     left: 50%;
     border-radius: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -53%);
   }
   &::before {
     width: 35%;
@@ -107,8 +110,15 @@ blockquote {
   display: grid;
   gap: 1rem;
   margin-bottom: 2rem;
-  border-left: 4px solid rgb(23, 8, 51);
+  border-left: 4px solid var(--line-color);
+  border-right: 4px solid var(--line-color);
   font-size: 1.7rem;
+
+  background: linear-gradient(to right, rgb(221, 36, 118), rgb(255, 81, 47))
+    text;
+  background: linear-gradient(to right, rgb(167, 14, 83), rgb(172, 46, 20)) text;
+  color: transparent;
+  font-weight: 600;
 }
 
 .info {
@@ -122,9 +132,10 @@ blockquote {
 
 .description {
   display: grid;
-  gap: 1rem;
+  gap: 2rem;
   align-items: center;
-  /* align-self: self-start; */
+  align-self: center;
+  transform: translateY(-10px);
 }
 
 .description-box {
@@ -137,19 +148,28 @@ blockquote {
 }
 
 .heading {
-  width: 100%;
   font-size: 14px;
-  font-weight: 600;
   text-transform: uppercase;
-  /* background-image: linear-gradient(
-    to right,
-    #270b41,
-    #320d47,
-    rgba(226, 45, 226, 0.918)
-  ); */
-  background-color: rgb(219, 39, 119);
-  padding: 1rem;
-  border-radius: 0.2rem;
+  color: rgb(247, 6, 114);
+  color: rgb(51, 25, 66);
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  gap: 4px;
+  place-items: center;
+  width: 95%;
+  margin: 0px auto;
+  background-color: rgb(250, 197, 221);
+  padding: 0.8rem;
+  border-radius: 3px;
+  font-weight: 600;
+
+  &::after,
+  &::before {
+    content: "";
+    width: 60%;
+    height: 3px;
+    background-color: var(--line-color);
+  }
 }
 
 .heading-1 {
@@ -157,19 +177,16 @@ blockquote {
   font-weight: 800;
   text-transform: uppercase;
   background-image: linear-gradient(
-    to right,
-    #1c1720,
-    #111f35,
-    rgba(24, 75, 43, 0.808)
+    45deg,
+    rgb(115, 43, 247) 0%,
+    rgb(125, 48, 248) 13%
   );
-  /* background-image: linear-gradient(to right, #7ed56f, #28b485); */
-  -webkit-background-clip: text;
+  background-size: 100%;
   background-clip: text;
-  color: transparent;
-  /* color: rgb(38, 19, 46); */
+  -webkit-text-fill-color: transparent;
   padding: 0 1rem;
   border-radius: 0.2rem;
-  transform: skewY(0.6deg) skewX(-8deg) scale(1.04);
+  /* transform: skewY(0.6deg) skewX(-8deg) scale(1.04); */
   text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
   transition: all 0.3s;
 }
@@ -179,26 +196,25 @@ blockquote {
 } */
 
 .date {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .Section-title {
-  display: grid;
+  /* display: grid;
   grid-template-columns: 1fr max-content 1fr;
   grid-template-columns: max-content max-content;
   gap: 3rem;
   align-items: center;
-  /* justify-items: center; */
-  justify-content: end;
+  justify-content: end; */
   width: 100%;
   margin: -0.4rem auto 0;
 
-  &::before {
+  /* &::before {
     content: "";
     width: 150px;
     height: 4px;
-    background-color: orangered;
-  }
+    background-color: rgb(115, 43, 247);
+  } */
 }
 
 .title {
@@ -206,10 +222,6 @@ blockquote {
   grid-template-columns: max-content 1fr max-content;
   grid-template-rows: min-content min-content;
   text-transform: uppercase;
-  /* background-color: #111827;
-  color: white;
-  padding: 0.6rem;
-  border-radius: 4px; */
   column-gap: 1rem;
   align-items: center;
 }
@@ -217,8 +229,8 @@ blockquote {
 .name {
   font-size: 3rem;
   font-weight: 600;
-  grid-column: 2 / span 1;
-  grid-row: 1 / -1;
+  /* grid-column: 2 / span 1;
+  grid-row: 1 / -1; */
 }
 
 .brand {
