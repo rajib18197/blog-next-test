@@ -1,0 +1,30 @@
+---
+title: Situations where React JS doesn't shines well
+date: "2024-03-23"
+---
+
+Here's couple of situations where React JS doesn't shines well according to my learning so far:
+
+## Load Times
+
+When loading a react application, it takes lot of time to get ready as server just send full bundle.js file to the client and client takes that file and generate HTML, CSS, JS on the fly. so this process takes long time and it will put too much strain on the browser which is not good for business as performance hits hard in this case to the users devices.
+
+## SEO Concerns
+
+Since all the HTML(Content) are produced on the client, there is NO SEO thing possible on Plain React App (at least its not straightforward, developers has to take too much headache to implement this in an indirect way).
+
+## Lazy Loading
+
+As we know server send bundle.js file, So in large application codebase would be huge. If there is couple of pages(routes) then all pages code will be in that bundle file as pages are just showing the users that the app is multipage with smooth experience and react-router takes take the leverage of JS and turn it into route base app.
+
+So, there is no need to send entire bundle file at once as we only need part of it on the initial load. So we need to implement lazy loading which means split that big file into multiple files based on the routes definition and send only the part that users requested and when we go another page then send that chunk. This type of thing also requires a decent amount of configuration.
+
+So these are some of the issues that we've been facing constantly when building Applications in React.
+
+## Closing Words
+
+But even though we faced this kind of problems, React actually don’t have to take those burden on their shoulders because React is coming for building applications such as facebook, gmail, outlook, slack, doc etc. for support developers to make them easier to reason about their large codebase and write code in more declarative way as writing code vanilla JS is making things much complicated and requires lot of low level concerns and introduce a lot of bugs along with business logic. That’s the only goal.
+
+So, while giving developers a great way of building APP which is organize application with component architecture, thinking UI as a variable - just changing the data and react does the rest (reflect that change to the DOM) etc. they bring in couple of major issues that need to lookup seriously.
+
+That’s where Next JS comes into the game and takes all the responsibilities on their own and gives with many more developer experience + performance gains with react JS.

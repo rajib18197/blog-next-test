@@ -1,0 +1,16 @@
+---
+title: Framing react reactivity in simplest words
+date: "2024-03-23"
+---
+
+In React manually manipulating DOM is an Escape hatch. so we have to leave behind that old manual DOM selection, traversing, imperative way to instruct the browser how to mutate elements when some events happens for reaching the desired updated UI because It’s very hard in complex app to display correct data in the UI all the time with direct DOM manipulation also code become spaghetti too.
+
+If direct DOM update is redundant in react then what is the mystical weapon to do the Job for us because in the end data needs to be reflected in the UI otherwise what’s the point of having data in the first place.
+
+Yes, It's the State. React does that by calling the component function again. It’s an complex algorithm that react does behind the scene by re-create the element tree and compare that tree with linked-list representation of fiber tree, figuring out all the difference and then send those differences to the react-DOM which committed or doing actual changes to the DOM and as a result browser then re-paint the actual minimum changes which improves overall app performance.
+
+And that leads to our next question: when does this process happen, that happens when the state gets updated. So when a state gets fed with a new value, which triggers react to do the tedious work for us which is to balance the UI with data.
+
+So see the pattern. Let me try to help you. Whenever you want something to change in the UI just update that piece of UI’s (component) state and as a response react will do that reflection of changing data in the UI to make the app work as intended.
+
+So, we’ve got a powerful mental shift to build our applications which is lot easier and feasible than before 🔥.
