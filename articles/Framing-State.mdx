@@ -3,17 +3,17 @@ title: Framing State Design
 date: "2024-03-18"
 ---
 
-State let component remember information and we need it when a certain user action needs to change data from one value to other value.
+**State let component remember information and we need it when a certain user action needs to change data from one value to other value.**
 
 When Designing state in React Apps I follow a couple of guidelines that might be helpful for you:
 
-1. 𝐎𝐮𝐭𝐥𝐢𝐧𝐞 𝐔𝐬𝐞𝐫𝐬 𝐁𝐞𝐡𝐚𝐯𝐢𝐨𝐫𝐬 𝐚𝐧𝐝 𝐜𝐨𝐧𝐬𝐞𝐪𝐮𝐞𝐧𝐜𝐞𝐬
+### 1. 𝐎𝐮𝐭𝐥𝐢𝐧𝐞 𝐔𝐬𝐞𝐫𝐬 𝐁𝐞𝐡𝐚𝐯𝐢𝐨𝐫𝐬 𝐚𝐧𝐝 𝐜𝐨𝐧𝐬𝐞𝐪𝐮𝐞𝐧𝐜𝐞𝐬
 
 The first step is to write all the steps users will do and what are the results they will see by using that component. This will force us to think about deeply what our component’s purpose actually is.
 
 So we observed what are the commands that can be given by users as they interact with that component on the screen and what are the responses they got.
 
-2. 𝐈𝐦𝐦𝐞𝐫𝐬𝐞 𝐲𝐨𝐮𝐫𝐬𝐞𝐥𝐟 𝐢𝐧 𝐨𝐧𝐥𝐲 𝐜𝐡𝐚𝐧𝐠𝐞𝐬
+### 2. 𝐈𝐦𝐦𝐞𝐫𝐬𝐞 𝐲𝐨𝐮𝐫𝐬𝐞𝐥𝐟 𝐢𝐧 𝐨𝐧𝐥𝐲 𝐜𝐡𝐚𝐧𝐠𝐞𝐬
 
 We need to set a specific intention here and don’t let ourselves be distracted by what is static in that component.
 
