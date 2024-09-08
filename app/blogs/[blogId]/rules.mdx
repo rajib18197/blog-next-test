@@ -1,0 +1,53 @@
+// 1. do this way
+
+// If we dont put curly braces in the start then inside the second p it will add another p tag.
+
+<NotesBox title="Bundle">
+  {
+    <div>
+      <p>Nice!! {22 + 11}</p>
+      <p>
+        To Place Simply, aggregation of our entire application code + the React
+        library's code + 3rd party libraries condensed into one JavaScript file
+        makes a bundle.
+      </p>
+    </div>
+  }
+</NotesBox>
+
+or
+
+// 2. do this way
+
+<Notes
+  title="Code Splitting"
+  description={
+    <>
+      <p>
+        To Make a better user experince, we can divide the bundle into multiple
+        parts and download them when needed. This would lead to the faster
+        initial load times as users don't have to download that one huge bundle.
+      </p>
+      <p>
+        For example If an app has 5 pages, then downloading them at once burden
+        the pressure into users computer and what else - user might not visit
+        the all 6 pages in this situation. So to prevent that we could split
+        each pages and download them individually when user need them. So now
+        the bundle has divided into 5 parts. This is called code splitting.
+      </p>
+    </>
+  }
+/>
+
+---
+
+Mental model stays simple. Everything is a simple function. My app is one big
+function composed of smaller and smaller ones. It trully sounds great! But in
+a real world, hooks are not so simple, homogen and composable. There are
+obstacles and limits mainly because of rule of hooks. This post is not about
+saying React hooks are bad. I wrote it because I did not find any resources on
+such obstacles and limits. The React world looks like hooks are always
+pleasant walk trought the rosy garden. But they are not. For now I don't know
+how to elegantly solve the recusrion example. Are there some resources on
+this? Do you have following thougts? Maybe I'm not the only one struggling.
+Thanks for reading.

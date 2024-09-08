@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export default function BlogRow({ blog }) {
-  const { id, title, date } = blog;
+  const { id, title, abstract, publishedOn } = blog;
 
   return (
     <div className="details">
@@ -10,16 +10,11 @@ export default function BlogRow({ blog }) {
           <Link href={`/blogs/${id}`}>
             <h1 className="heading-1">{title}</h1>
           </Link>
-          <p className="date">{new Date(date).toLocaleDateString()}</p>
+          <p className="date">{new Date(publishedOn).toLocaleDateString()}</p>
         </div>
         {/*  */}
         <div className="box">
-          <div className="overview">
-            Try to see If there's a smaller version of the problem that you can
-            solve. Use your Imaginative Power to design the best Environment,
-            best Product, best Service, Best User Interface etc. Imagination is
-            Everything.
-          </div>
+          <div className="overview">{abstract}</div>
         </div>
         {/*  */}
         <div className="description">

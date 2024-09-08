@@ -1,5 +1,7 @@
 import Counter from "@/app/components/Counter";
 import NotesBox from "@/app/components/NotesBox";
+import Notes from "@/app/components/Notes";
+
 import getBlogsData, { getBlogData } from "@/lib/blogs";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { notFound } from "next/navigation";
@@ -22,7 +24,7 @@ export default async function Blog({ params }) {
         <p className="font-bold text-2xl">{date}</p>
       </div>
       <article className="article prose prose-sm md:prose-base lg:prose-lg mx-auto">
-        <MDXRemote source={content} components={{ Counter, NotesBox }} />
+        <MDXRemote source={content} components={{ Counter, NotesBox, Notes }} />
       </article>
     </main>
   );
